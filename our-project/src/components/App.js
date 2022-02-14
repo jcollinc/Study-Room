@@ -19,6 +19,7 @@ function App() {
         <Route path="/interact">
           <Interact />
         </Route>
+        
       </Switch>
     </div>  
   );
