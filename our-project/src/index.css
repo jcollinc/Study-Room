@@ -16,11 +16,11 @@ code {
 
 .logo {
   font-size: 30px;
-  color: #FF671F
+  color: #00704A
 }
 
 nav {
-  background-color: white;
+  background-color: #00704A;
   /* position: fixed; */
   padding: 5px 0px 10px 15px;
 }
@@ -33,22 +33,19 @@ nav a {
   margin: 1rem 2rem;
   text-decoration: none;
   font-size: 1.2em;
-  color: #FF671F;
+  color: white;
 
   transition: 0.1s;
 }
 
 nav a:hover {
-  color: #DA1884;
-  border-bottom: 2px solid #DA1884;
+  color: #27251F;
+  border-bottom: 2px solid #27251F;
 }
 
 nav a:active {
-  color: #DA1884;
+  color: #27251F;
   border-bottom: 2px solid ;
 }
 
-nav a.active {
-  color: #DA1884;
-}
 
