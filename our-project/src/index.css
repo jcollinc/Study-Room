@@ -14,11 +14,19 @@ code {
     monospace;
 }
 
+.logo {
+  font-size: 30px;
+  color: #FF671F
+}
+
 nav {
   background-color: white;
   /* position: fixed; */
   padding: 5px 0px 10px 15px;
 }
+
+
+
 
 nav a {
   display: inline-block;
