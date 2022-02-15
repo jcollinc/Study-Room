@@ -8,9 +8,10 @@ function DataCards() {
   const [fName, setFname] = useState('')
   const [error, setError] = useState('')
 
-  const [title, setTitle] = useState('');
-	const [description, setDescription] = useState('');
-	const [image, setImage] = useState('');
+  // Keeping these just in case.
+  // const [title, setTitle] = useState('');
+	// const [description, setDescription] = useState('');
+	// const [image, setImage] = useState('');
 
   useEffect(() => {
     fetch('http://localhost:3000/coffees')
@@ -60,7 +61,6 @@ function DataCards() {
 			setError(["All inputs are required!"])
 		}
 	}
-
 
   return (
     <div>
