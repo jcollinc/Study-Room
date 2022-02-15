@@ -18,8 +18,8 @@ function Card({ Card, coffee }) {
                     <div className="card_title">{title}</div>
                     <p className="card_text">{description}</p>
                 </div>
-                <button className="card_button">Add to Cart</button>
             </div>
+            <button className="card_button">Add to Cart</button>
         </li>
     )
 }
