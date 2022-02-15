@@ -11,15 +11,14 @@ function Interact() {
 			console.log('hi from interact', cohorts)
 			setCohorts(cohorts)
 		})
-
 	}, [])
 
 	let itemsToDisplay = cohorts
 		.map(cohort => {
 			return (
 				<ul key={cohort.fName}>
-					{cohort.fName}, {cohort.title}
-					<img src={cohort.image}/>
+					<img className="cohort_image" src={cohort.image} />
+					{cohort.fName} | {cohort.title}
 				</ul>
 				
 			)
@@ -27,7 +26,10 @@ function Interact() {
 
 
 	return (
-		<>{itemsToDisplay}</>
+		<div>
+			{itemsToDisplay}
+			
+		</div>
 	)
 }
 

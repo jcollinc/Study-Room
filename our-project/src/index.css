@@ -101,6 +101,18 @@ li.card button.card_button {
 
 
 
+/* INTERACT */
+.cohort_image {
+  height: 125px;
+  position: relative;
+  width: 125px;
+  display: flex;
+  justify-content: center;
+  border: 2px solid #1f3933 ;
+  border-radius: 50%;
+}
+
+
 
 
 
