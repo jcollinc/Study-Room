@@ -25,6 +25,27 @@ nav {
   padding: 5px 0px 10px 15px;
 }
 
+nav a {
+  display: inline-block;
+  margin: 1rem 2rem;
+  text-decoration: none;
+  font-size: 1.2em;
+  color: white;
+
+  transition: 0.1s;
+}
+
+nav a:hover {
+  color: #27251F;
+  border-bottom: 2px solid #1f3933;
+}
+
+nav a:active {
+  color: #1f3933;
+  border-bottom: 2px solid ;
+
+}
+
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -55,24 +76,6 @@ nav {
   padding-bottom: 20px;
 }
 
-nav a {
-  display: inline-block;
-  margin: 1rem 2rem;
-  text-decoration: none;
-  font-size: 1.2em;
-  color: white;
 
-  transition: 0.1s;
-}
-
-nav a:hover {
-  color: #27251F;
-  border-bottom: 2px solid #1f3933;
-}
-
-nav a:active {
-  color: #1f3933;
-  border-bottom: 2px solid ;
-}
 
 
