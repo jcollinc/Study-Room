@@ -63,7 +63,7 @@ function DataCards() {
 	}
 
   return (
-    <div>
+    <div className="cards">
       {itemsToDisplay}
       <form onSubmit={handleSubmit}>
         <label htmlFor='fName'>First Name:</label>
