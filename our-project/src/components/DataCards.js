@@ -63,29 +63,33 @@ function DataCards() {
 	}
 
   return (
-    <div className="cards">
-      {itemsToDisplay}
-      <form className="form" onSubmit={handleSubmit}>
-        <label htmlFor='fName'>First Name:</label>
-        <input
-          type='text'
-          id='fName'
-          value={fName}
-          onChange={e => setFname(e.target.value)}
-        />		
-        <button type="submit">Submit</button>
-        
-        {/* And the error state */}
-        {
-          error.length > 0
-            ? error.map((error, index) => (
-              <p key={index} style={{ color: "red" }}>
-                {error}
-              </p>
-            ))
-            : null
-        }
-		  </form>
+    <div>
+      <div className="form-div">
+        <form className="form" onSubmit={handleSubmit}>
+          <label htmlFor='fName'>Please enter a name for the order:</label>
+          <input
+            type='text'
+            id='fName'
+            value={fName}
+            onChange={e => setFname(e.target.value)}
+          />		
+          <button type="submit">Submit</button>
+          
+          {/* And the error state */}
+          {
+            error.length > 0
+              ? error.map((error, index) => (
+                <p key={index} style={{ color: "red" }}>
+                  {error}
+                </p>
+              ))
+              : null
+          }
+        </form>
+      </div>
+      <div className="cards">
+        {itemsToDisplay}
+      </div>
     </div>
   )
 }

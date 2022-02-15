@@ -2,25 +2,26 @@ import React from 'react'
 
 function Card({ Card, coffee }) {
 
-    const { fName, image, title, description } = coffee
+    const { image, title, description } = coffee
 
     return (
-        <li className="card">
-            <div className="image">
-                <img
-                    src={image}
-                    alt={title}
-                />
-            </div>
-            <div className="description">    
-                <div className="card_content">
-                    <div className="card_name">{fName}</div>
-                    <div className="card_title">{title}</div>
-                    <p className="card_text">{description}</p>
+        <div className="card-container">
+            <li className="card">
+                <div className="image">
+                    <img
+                        src={image}
+                        alt={title}
+                    />
                 </div>
-            </div>
-            <button className="card_button">Add to Cart</button>
-        </li>
+                <div className="description">    
+                    <div className="card_content">
+                        <div className="card_title">{title}</div>
+                        <p className="card_text">{description}</p>
+                        <button className="card_button">Add to Cart</button>
+                    </div>
+                </div>
+            </li>
+        </div>
     )
 }
 
