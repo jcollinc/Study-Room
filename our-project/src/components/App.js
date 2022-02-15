@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Switch, Route } from 'react-router-dom'
+
 import Home from "./Home"
 import NavBar from "./NavBar"
 import Card from './Card'
 import DataCards from "./DataCards"
 import Interact from "./Interact"
+
 
 function App() {
 
