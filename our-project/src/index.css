@@ -16,11 +16,11 @@ code {
 
 .logo {
   font-size: 30px;
-  color: #00704A
+  color: white
 }
 
 nav {
-  background-color: #00704A;
+  background-color: #1f3933;
   /* position: fixed; */
   padding: 5px 0px 10px 15px;
 }
@@ -67,11 +67,11 @@ nav a {
 
 nav a:hover {
   color: #27251F;
-  border-bottom: 2px solid #27251F;
+  border-bottom: 2px solid #1f3933;
 }
 
 nav a:active {
-  color: #27251F;
+  color: #1f3933;
   border-bottom: 2px solid ;
 }
 
