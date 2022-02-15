@@ -69,5 +69,69 @@
             "image": "https://m.psecn.photoshelter.com/img-get/I0000ugonBT7Tkyg/s/1000?1644909154",
             "id": 6
         }
+    ],
+
+    "cohorts": [
+        {
+          "fName": "Tyler",
+          "title": "Instructor",
+          "image": "https://m.psecn.photoshelter.com/img-get/I0000fjnZLkaEh.E/s/1000?1644967937"
+        },
+        {
+          "fName": "Aaron",
+          "title": "Student",
+          "image": "https://m.psecn.photoshelter.com/img-get/I0000fjnZLkaEh.E/s/1000?1644967937"
+        },
+        {
+          "fName": "Chun",
+          "title": "Student",
+          "image": "https://m.psecn.photoshelter.com/img-get/I0000fjnZLkaEh.E/s/1000?1644967937"
+        },
+        {
+          "fName": "Daniel",
+          "title": "Student",
+          "image": "https://m.psecn.photoshelter.com/img-get/I0000fjnZLkaEh.E/s/1000?1644967937"
+        },
+        {
+          "fName": "Ethan",
+          "title": "Student",
+          "image": "https://m.psecn.photoshelter.com/img-get/I0000fjnZLkaEh.E/s/1000?1644967937"
+        },
+        {
+          "fName": "Felipa",
+          "title": "Student",
+          "image": "https://m.psecn.photoshelter.com/img-get/I0000fjnZLkaEh.E/s/1000?1644967937"
+        },
+        {
+          "fName": "Hamzah",
+          "title": "Student",
+          "image": "https://m.psecn.photoshelter.com/img-get/I0000fjnZLkaEh.E/s/1000?1644967937"
+        },
+        {
+          "fName": "Jon",
+          "title": "Student",
+          "image": "https://m.psecn.photoshelter.com/img-get/I0000fjnZLkaEh.E/s/1000?1644967937"
+        },
+        {
+          "fName": "Matt",
+          "title": "Student",
+          "image": "https://m.psecn.photoshelter.com/img-get/I0000fjnZLkaEh.E/s/1000?1644967937"
+        },
+        {
+          "fName": "Mohammed",
+          "title": "Student",
+          "image": "https://m.psecn.photoshelter.com/img-get/I0000fjnZLkaEh.E/s/1000?1644967937"
+        },
+        {
+          "fName": "Vanessa",
+          "title": "Student",
+          "image": "https://m.psecn.photoshelter.com/img-get/I0000fjnZLkaEh.E/s/1000?1644967937"
+        },
+        {
+          "fName": "Yeohoon",
+          "title": "Student",
+          "image": "https://m.psecn.photoshelter.com/img-get/I0000fjnZLkaEh.E/s/1000?1644967937"
+        }
     ]
+    
 }

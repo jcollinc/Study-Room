@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Card({ Card, coffee }) {
+function Card({ coffee }) {
 
     const { image, title, description } = coffee
 
