@@ -25,8 +25,35 @@ nav {
   padding: 5px 0px 10px 15px;
 }
 
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
 
+.card {
+  list-style-type: none;
+  margin: 1rem;
+  box-shadow: 0 0 7px 0 #ddd;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 270px;
+}
 
+.card .image {
+  height: 225px;
+  position: relative;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.card .image img {
+  max-width: 300px;
+  max-height: 225px;
+  width: auto;
+  height: auto;
+  padding-bottom: 20px;
+}
 
 nav a {
   display: inline-block;
