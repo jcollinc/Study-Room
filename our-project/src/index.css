@@ -14,6 +14,8 @@ code {
     monospace;
 }
 
+/* NAVBAR */
+
 .logo {
   font-size: 30px;
   color: white;
@@ -47,8 +49,13 @@ nav a:active {
 
 }
 
+/* COFFEE CARDS */
+
 .cards {
   display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  height: 100%;
 }
 
 .card {
@@ -58,6 +65,7 @@ nav a:active {
   border-radius: 5px;
   border: 1px solid #ccc;
   width: 225px;
+  height: auto;
 }
 
 .card .image {
@@ -69,7 +77,9 @@ nav a:active {
 }
 
 div.description {
-  display: flex
+  display: flex;
+  position: relative;
+  height: auto;
 }
 
 div.card_content {
@@ -77,8 +87,8 @@ div.card_content {
   padding: 10px
 }
 
-div.card_button {
-  position: left;
+li.card button.card_button {
+  padding: 2px;
 }
 
 /* .card .image img {
@@ -88,3 +98,9 @@ div.card_button {
   height: auto;
   padding: 10px;
 } */
+
+
+
+
+
+

@@ -65,7 +65,7 @@ function DataCards() {
   return (
     <div className="cards">
       {itemsToDisplay}
-      <form onSubmit={handleSubmit}>
+      <form className="form" onSubmit={handleSubmit}>
         <label htmlFor='fName'>First Name:</label>
         <input
           type='text'
@@ -73,7 +73,7 @@ function DataCards() {
           value={fName}
           onChange={e => setFname(e.target.value)}
         />		
-        <button type="submit">Add Item</button>
+        <button type="submit">Submit</button>
         
         {/* And the error state */}
         {
