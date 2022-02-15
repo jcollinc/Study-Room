@@ -8,7 +8,7 @@ function Interact() {
 		fetch('http://localhost:3000/cohorts')
 		.then(res => res.json())
 		.then(cohorts => {
-			console.log('hi from interact', cohorts)
+			//console.log('hi from interact', cohorts)
 			setCohorts(cohorts)
 		})
 	}, [])
@@ -16,19 +16,31 @@ function Interact() {
 	let itemsToDisplay = cohorts
 		.map(cohort => {
 			return (
-				<ul key={cohort.fName}>
-					<img className="cohort_image" src={cohort.image} />
-					{cohort.fName} | {cohort.title}
-				</ul>
-				
+				<li key={cohort.fName} className="cards">
+					
+					<div className="cards_item">
+						<ul>
+							<img className="cohort_image" src={cohort.image} />
+							{cohort.fName} | {cohort.title} ordered a
+						</ul>
+
+					</div>
+
+
+				</li>	
 			)
 		})
 
+		
+	let today = new Date().getDate()
+	console.log(today)
 
 	return (
 		<div>
+			<h1>#east-se-011022-c</h1>
+			<h3>Today is: {today}</h3>
 			{itemsToDisplay}
-			
+
 		</div>
 	)
 }
