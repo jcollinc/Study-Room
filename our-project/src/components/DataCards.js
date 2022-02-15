@@ -9,7 +9,7 @@ function DataCards() {
     fetch('http://localhost:3000/coffees')
     .then(res => res.json())
     .then(coffees => {
-      // console.log(coffees)
+      console.log('hi from DataCards', coffees)
       setCoffees(coffees)
     })
   }, [])
