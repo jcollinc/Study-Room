@@ -12,13 +12,13 @@ function Card({ Card, coffee }) {
                     alt={title}
                 />
             </div>
-            <div>    
+            <div className="description">    
                 <div className="card_content">
                     <div className="card_name">{fName}</div>
                     <div className="card_title">{title}</div>
                     <p className="card_text">{description}</p>
                 </div>
-                <button>Add to Cart</button>
+                <button className="card_button">Add to Cart</button>
             </div>
         </li>
     )
