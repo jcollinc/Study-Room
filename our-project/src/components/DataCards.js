@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Card from './Card'
+import Interact from './Interact'
 
 function DataCards() {
 
@@ -22,9 +23,16 @@ function DataCards() {
     }
   )
 
+  // Create a new array, add the new item, then sets the coffees obj
+  function handleAddItem(newItem) {
+    const updatedCards = [newItem, ...coffees]
+    setCoffees(updatedCards)
+  }
+
   return (
     <div>
       {itemsToDisplay}
+      <Interact handleAddItem={handleAddItem} />
     </div>
   )
 }
