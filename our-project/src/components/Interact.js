@@ -15,32 +15,29 @@ function Interact() {
 
 	let itemsToDisplay = cohorts
 		.map(cohort => {
+			let orderMessage
+			let noOrderMessage
+			
+			if (cohort.order) {orderMessage = cohort.fName + " ordered: " + cohort.order.join(', ') + " ᕙ(o‸o)ᕗ"; noOrderMessage = null}
+			else {orderMessage = null; noOrderMessage = cohort.fName + " hasn't ordered yet (ￗ﹏ￗ ) "}
+
 			return (
 				<li key={cohort.fName} className="cards">
-					
 					<div className="cards_item">
 						<ul>
-							<img className="cohort_image" src={cohort.image} />
-							{cohort.fName} | {cohort.title} ordered a
+							<img 
+								className="cohort_image" src={cohort.image} 
+							/>
+							{cohort.order ? orderMessage : noOrderMessage}
 						</ul>
-
 					</div>
-
-
 				</li>	
 			)
 		})
 
-		
-	let today = new Date().getDate()
-	console.log(today)
-
 	return (
 		<div>
-			<h1>#east-se-011022-c</h1>
-			<h3>Today is: {today}</h3>
 			{itemsToDisplay}
-
 		</div>
 	)
 }
