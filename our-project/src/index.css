@@ -55,9 +55,10 @@ nav a:active {
   display: flex;
   overflow-x: auto;
   max-width: 100%;
+  justify-content: center;
 }
 
-div.card-container button.card_button {
+.card_button {
   padding:0.3em 1.2em;
   margin:0 0.3em 0.3em 0;
   border-radius:2em;
@@ -70,11 +71,24 @@ div.card-container button.card_button {
   transition: all 0.2s;
 }
 
+.button-claimed {
+  padding:0.3em 1.2em;
+  margin:0 0.3em 0.3em 0;
+  border-radius:2em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-weight:300;
+  color:#FFFFFF;
+  background-color:#39796a;
+  text-align:center;
+  transition: all 0.2s;
+}
+
 .card {
   list-style-type: none;
   margin: 1rem;
   box-shadow: 0 0 7px 0 #ddd;
-  border-radius: 5px;
+  border-radius: 60px;
   border: 1px solid #ccc;
   width: 225px;
   height: 95%;
@@ -87,6 +101,10 @@ div.card-container button.card_button {
   display: flex;
   justify-content: center;
   border-radius: 5px;
+}
+
+.card .image img {
+  border-radius: 10px;
 }
 
 div.description {
@@ -105,16 +123,16 @@ p.card_text {
 
 /* FORM */
 
-div.form-div {
+div.dropdown-div {
   width: 100%;
   display: block;
   text-align: center;
   padding-top: 15px;
 }
 
-div.form
+select.dropdown
 {
-  width: 100%;
+  width: 160px;
   display: inline-block;
   margin-left: auto;
   margin-right: auto;

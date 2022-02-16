@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-function Card({ coffee }) {
+function Card({ coffee, id, name, handleClaim }) {
 
     const { image, title, description } = coffee
+
+ 
 
     return (
         <div className="card-container">
@@ -17,7 +19,7 @@ function Card({ coffee }) {
                     <div className="card_content">
                         <div className="card_title">{title}</div>
                         <p className="card_text">{description}</p>
-                        <button className="card_button">Add to Cart</button>
+                        {name ? <button id={id} onClick={handleClaim} className="card_button">Claim</button> : null}
                     </div>
                 </div>
             </li>
