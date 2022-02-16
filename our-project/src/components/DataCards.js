@@ -5,23 +5,16 @@ import Card from './Card'
 function DataCards() {
 
 	const [coffees, setCoffees] = useState([])
-	const [name, setName] = useState(null)
+	const [id, setId] = useState(null)
 	const [coffeeOrder, setCoffeeOrder] = useState([])
+	const [name, setName] = useState(null)
 
 	let newOrder;
-
-	// Keeping these just in case.
-	// const [title, setTitle] = useState('');
-	// const [description, setDescription] = useState('');
-	// const [image, setImage] = useState('');
-	// const [fName, setFname] = useState('')
-	// const [error, setError] = useState('')
 
 	useEffect(() => {
 		fetch('http://localhost:3000/coffees')
 		.then(res => res.json())
 		.then(coffees => {
-			console.log('hi from DataCards', coffees)
 			setCoffees(coffees)
 		})
 	}, [])
@@ -33,7 +26,7 @@ function DataCards() {
 					coffee={coffee} 
 					key={coffee.id} 
 					coffeeOrder={coffeeOrder}
-					name={name} 
+					id={id} 
 					handleClaim={handleClaim}
 				/>
 			)		
@@ -42,10 +35,10 @@ function DataCards() {
 
 
 	function handleDropdownChange (e) {
-		e.target.value.length > 0 ? setName(e.target.value) : setName(null)
+		e.target.value.length > 0 ? setId(e.target.value) : setId(null)
+		setName(e.target.options[e.target.selectedIndex].text)
 		setCoffeeOrder([])
 		newOrder = {}
-		console.log(coffeeOrder)
 	}
 
 	function handleClaim (e) {
@@ -56,31 +49,52 @@ function DataCards() {
 		else {e.target.innerText = "Order"
 			  e.target.className = "card_button"}
 		coffees.map(coffee => {
-			if (coffee.title.toString() === e.target.id && !coffeeOrder.includes(coffee.title)) {
+			if (coffee.title === e.target.id && !coffeeOrder.includes(coffee.title)) {
 				setCoffeeOrder(coffeeOrder => [...coffeeOrder, coffee.title])
 				console.log(coffeeOrder)
 			}
-			else if (coffee.title.toString() === e.target.id && coffeeOrder.includes(coffee.title)) {
+			else if (coffee.title === e.target.id && coffeeOrder.includes(coffee.title)) {
 				setCoffeeOrder(coffeeOrder => coffeeOrder.filter(coffee => coffee!== e.target.id))
+				console.log(coffeeOrder)
 			}
 		})
 	}
 
-	function handleSubmit (e) {
-		newOrder = {[name] : coffeeOrder}
+	function handleSubmit () {
+		newOrder = {order : coffeeOrder}
 		console.log(newOrder)
-	}
+		fetch (`http://localhost:3000/cohorts/${id}`, {
+			method: "PATCH",
+			headers: {
+				"Content-Type": "application/json", 
+				"Accept": "application/json"},
+			body: JSON.stringify(newOrder)
+      })
+				.then(r => r.json())
+				.then(data => console.log(data))
+  	}
+	
 
   return (
     <div>
       <div className="dropdown-div">
-		<p>{name ? `Hello ${name}, what would you like to order?` : "Welcome to the study room!"}</p>
+		<p className={name ? "hello" : "welcome"}>
+			{id ? `Hello ${name}, what would you like to order?` : "Welcome to the study room!"}
+		</p>
 	  	<select onChange={handleDropdownChange} className="dropdown">
-			<option value="">Please select name:</option>
-			<option value="Chun">Chun</option>
-			<option value="Jon">Jon</option>
-			<option value="Daniel">Daniel</option>
-			<option value="Aaron">Aaron</option>
+			<option name="Jon" value="">Please select name:</option>
+			<option name="Jon" value="1">Tyler</option>
+			<option name="Jon" value="2">Aaron</option>
+			<option name="Jon" value="3">Chun</option>
+			<option name="Jon" value="4">Daniel</option>
+			<option name="Jon" value="5">Ethan</option>
+			<option name="Jon" value="6">Felipa</option>
+			<option name="Jon" value="7">Hamzah</option>
+			<option name="Jon" value="8">Jon</option>
+			<option name="Jon" value="9">Matt</option>
+			<option name="Jon" value="10">Mohammed</option>
+			<option name="Jon" value="11">Vanessa</option>
+			<option name="Jon" value="12">Yeohoon</option>
 		</select>
       </div>
       <div className="cards">

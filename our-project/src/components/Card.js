@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-function Card({ coffee, name, handleClaim, coffeeOrder, }) {
+function Card({ coffee, id, handleClaim, coffeeOrder, }) {
 
     const { image, title, description } = coffee
 
@@ -17,7 +17,7 @@ function Card({ coffee, name, handleClaim, coffeeOrder, }) {
                     <div className="card_content">
                         <div className="card_title">{title}</div>
                         <p className="card_text">{description}</p>
-                        {name ? 
+                        {id ? 
                             <button 
                                 id={title} 
                                 onClick={handleClaim} 
