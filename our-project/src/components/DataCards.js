@@ -50,7 +50,7 @@ function DataCards() {
 			  e.target.className = "card_button"}
 		coffees.map(coffee => {
 			if (coffee.title === e.target.id && !coffeeOrder.includes(coffee.title)) {
-				setCoffeeOrder(coffeeOrder => [...coffeeOrder, coffee.title])
+				setCoffeeOrder(coffeeOrder => [...coffeeOrder , coffee.title])
 				console.log(coffeeOrder)
 			}
 			else if (coffee.title === e.target.id && coffeeOrder.includes(coffee.title)) {
