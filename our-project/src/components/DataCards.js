@@ -5,16 +5,17 @@ import Card from './Card'
 function DataCards() {
 
 	const [coffees, setCoffees] = useState([])
-	const [fName, setFname] = useState('')
-	const [error, setError] = useState('')
 	const [name, setName] = useState(null)
-	
-	let coffeeOrder = []
+	const [coffeeOrder, setCoffeeOrder] = useState([])
+
+	let newOrder;
 
 	// Keeping these just in case.
 	// const [title, setTitle] = useState('');
 	// const [description, setDescription] = useState('');
 	// const [image, setImage] = useState('');
+	// const [fName, setFname] = useState('')
+	// const [error, setError] = useState('')
 
 	useEffect(() => {
 		fetch('http://localhost:3000/coffees')
@@ -31,7 +32,7 @@ function DataCards() {
 				<Card 
 					coffee={coffee} 
 					key={coffee.id} 
-					id={coffee.id}
+					coffeeOrder={coffeeOrder}
 					name={name} 
 					handleClaim={handleClaim}
 				/>
@@ -39,25 +40,35 @@ function DataCards() {
 		}
 	)
 
+
 	function handleDropdownChange (e) {
 		e.target.value.length > 0 ? setName(e.target.value) : setName(null)
-		coffeeOrder = []
+		setCoffeeOrder([])
+		newOrder = {}
 		console.log(coffeeOrder)
 	}
 
 	function handleClaim (e) {
-		if (e.target.innerText === "Claim") {
-			e.target.innerText = "Claimed!"
+		if (e.target.innerText === "Order") {
+			e.target.innerText = "Ordered!"
 			e.target.className = "button-claimed"
 		}
-		else {e.target.innerText = "Claim"
+		else {e.target.innerText = "Order"
 			  e.target.className = "card_button"}
 		coffees.map(coffee => {
-			if (coffee.id.toString() === e.target.id && !coffeeOrder.includes(coffee.title)) {
-				coffeeOrder.push(coffee.title)
+			if (coffee.title.toString() === e.target.id && !coffeeOrder.includes(coffee.title)) {
+				setCoffeeOrder(coffeeOrder => [...coffeeOrder, coffee.title])
 				console.log(coffeeOrder)
 			}
+			else if (coffee.title.toString() === e.target.id && coffeeOrder.includes(coffee.title)) {
+				setCoffeeOrder(coffeeOrder => coffeeOrder.filter(coffee => coffee!== e.target.id))
+			}
 		})
+	}
+
+	function handleSubmit (e) {
+		newOrder = {[name] : coffeeOrder}
+		console.log(newOrder)
 	}
 
   return (
@@ -75,6 +86,9 @@ function DataCards() {
       <div className="cards">
         {itemsToDisplay}
       </div>
+	  <div className="submit-div">
+	  	{coffeeOrder.length === 0 ? null : <button onClick={handleSubmit} className="card_button">Submit Order</button>}
+	  </div>
     </div>
   )
 }

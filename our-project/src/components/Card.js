@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
 
-function Card({ coffee, id, name, handleClaim }) {
+function Card({ coffee, name, handleClaim, coffeeOrder, }) {
 
     const { image, title, description } = coffee
-
- 
 
     return (
         <div className="card-container">
@@ -19,7 +17,14 @@ function Card({ coffee, id, name, handleClaim }) {
                     <div className="card_content">
                         <div className="card_title">{title}</div>
                         <p className="card_text">{description}</p>
-                        {name ? <button id={id} onClick={handleClaim} className="card_button">Claim</button> : null}
+                        {name ? 
+                            <button 
+                                id={title} 
+                                onClick={handleClaim} 
+                                className={coffeeOrder.includes(title) ? "button-claimed" : "card_button"}
+                            >
+                                {coffeeOrder.includes(title) ? "Ordered!" : "Order"}
+                            </button> : null}
                     </div>
                 </div>
             </li>
@@ -28,3 +33,5 @@ function Card({ coffee, id, name, handleClaim }) {
 }
 
 export default Card
+
+
