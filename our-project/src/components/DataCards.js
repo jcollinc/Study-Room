@@ -71,7 +71,7 @@ function DataCards() {
 			body: JSON.stringify(newOrder)
       })
 				.then(r => r.json())
-				.then(data => console.log(data))
+				.then(() => {setCoffeeOrder([])})
   	}
 	
 

@@ -86,7 +86,11 @@
       "fName": "Chun",
       "title": "Student",
       "image": "https://m.psecn.photoshelter.com/img-get/I0000fjnZLkaEh.E/s/1000?1644967937",
-      "id": 3
+      "id": 3,
+      "order": [
+        "Cold Brew",
+        "Frappuccino"
+      ]
     },
     {
       "fName": "Daniel",
@@ -140,7 +144,11 @@
       "fName": "Yeohoon",
       "title": "Student",
       "image": "https://m.psecn.photoshelter.com/img-get/I0000fjnZLkaEh.E/s/1000?1644967937",
-      "id": 12
+      "id": 12,
+      "order": [
+        "Iced Coffee",
+        "Iced Espresso"
+      ]
     }
   ],
   "suggestions": [

@@ -161,7 +161,7 @@ p.card_text {
 
 /* COHORT CARDS */
 .cards {
-  padding-bottom: 60px
+  padding-bottom: 30px
 }
 
 /* DROPDOWN */
@@ -188,6 +188,7 @@ select.dropdown
   padding: 0;
   margin-block-start: 40px;
   margin-block-end: 40px;
+  color: #1f3933;
 }
 
 .hello {
@@ -195,13 +196,13 @@ select.dropdown
   padding: 0;
   margin-block-start: 40px;
   margin-block-end: 40px;
+  color: #1f3933;
 }
 
 /* SUBMIT */
 
 .submit-div {
   text-align: center;
-  padding-top: 50px;
 }
 
 /* INTERACT */
