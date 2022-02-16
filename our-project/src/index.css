@@ -53,19 +53,45 @@ nav a:active {
 
 .cards {
   display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  height: 100%;
+  overflow-x: auto;
+  max-width: 100%;
+  justify-content: center;
+}
+
+.card_button {
+  padding:0.3em 1.2em;
+  margin:0 0.3em 0.3em 0;
+  border-radius:2em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-weight:300;
+  color:#FFFFFF;
+  background-color:#1f3933;
+  text-align:center;
+  transition: all 0.2s;
+}
+
+.button-claimed {
+  padding:0.3em 1.2em;
+  margin:0 0.3em 0.3em 0;
+  border-radius:2em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-weight:300;
+  color:#FFFFFF;
+  background-color:#39796a;
+  text-align:center;
+  transition: all 0.2s;
 }
 
 .card {
   list-style-type: none;
   margin: 1rem;
   box-shadow: 0 0 7px 0 #ddd;
-  border-radius: 5px;
+  border-radius: 60px;
   border: 1px solid #ccc;
   width: 225px;
-  height: auto;
+  height: 95%;
 }
 
 .card .image {
@@ -74,30 +100,51 @@ nav a:active {
   width: 225px;
   display: flex;
   justify-content: center;
+  border-radius: 5px;
+}
+
+.card .image img {
+  border-radius: 10px;
 }
 
 div.description {
-  display: flex;
-  position: relative;
-  height: auto;
+  height: 300px;
 }
 
 div.card_content {
   text-align: center;
-  padding: 10px
-}
-
-li.card button.card_button {
-  padding: 2px;
-}
-
-/* .card .image img {
-  max-width: 300px;
-  max-height: 225px;
-  width: auto;
-  height: auto;
   padding: 10px;
-} */
+  height: 300px;
+}
+
+p.card_text {
+  height: 200px;
+}
+
+/* FORM */
+
+div.dropdown-div {
+  width: 100%;
+  display: block;
+  text-align: center;
+  padding-top: 15px;
+}
+
+select.dropdown
+{
+  width: 160px;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+/* SUBMIT */
+
+.submit-div {
+  text-align: center;
+  padding-top: 50px;
+}
 
 
 
