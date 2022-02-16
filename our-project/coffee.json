@@ -35,8 +35,8 @@
       "id": 3
     },
     {
-      "title": "Frappuccino",
-      "description": "Made famous by Starbucks, the Frappuccino is a blended iced coffee drink that’s topped with whipped cream and syrup. ",
+      "title": "Flattuccino",
+      "description": "Made famous by Flatbucks, the Flattuccino is a blended iced coffee drink that’s topped with whipped cream and syrup. ",
       "ingredients": [
         "Espresso",
         "Blended ice",
@@ -86,11 +86,7 @@
       "fName": "Chun",
       "title": "Student",
       "image": "https://m.psecn.photoshelter.com/img-get/I0000fjnZLkaEh.E/s/1000?1644967937",
-      "id": 3,
-      "order": [
-        "Cold Brew",
-        "Frappuccino"
-      ]
+      "id": 3
     },
     {
       "fName": "Daniel",
@@ -144,11 +140,7 @@
       "fName": "Yeohoon",
       "title": "Student",
       "image": "https://m.psecn.photoshelter.com/img-get/I0000fjnZLkaEh.E/s/1000?1644967937",
-      "id": 12,
-      "order": [
-        "Iced Coffee",
-        "Iced Espresso"
-      ]
+      "id": 12
     }
   ],
   "suggestions": [

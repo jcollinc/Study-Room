@@ -19,6 +19,7 @@ code {
 .logo {
   font-size: 30px;
   color: white;
+  padding-left: 15px;
 }
 
 nav {
@@ -87,8 +88,8 @@ footer a:active {
 
 }
 
-
 /* COFFEE CARDS */
+
 .cards {
   display: flex;
   overflow-x: auto;
@@ -159,7 +160,12 @@ p.card_text {
   height: 200px;
 }
 
+.card_title {
+  font-weight: bold;
+}
+
 /* COHORT CARDS */
+
 .cards {
   padding-bottom: 30px
 }
