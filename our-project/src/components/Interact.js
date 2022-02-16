@@ -8,7 +8,6 @@ function Interact() {
 		fetch('http://localhost:3000/cohorts')
 		.then(res => res.json())
 		.then(cohorts => {
-			//console.log('hi from interact', cohorts)
 			setCohorts(cohorts)
 		})
 	}, [])

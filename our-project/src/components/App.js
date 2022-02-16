@@ -5,9 +5,9 @@ import NavBar from "./NavBar"
 import Card from './Card'
 import DataCards from "./DataCards"
 import Interact from "./Interact"
+import Footer from "./Footer"
 
 function App() {
-
 
   const [coffees, setCoffees] = useState([])
 
@@ -18,20 +18,20 @@ function App() {
   }
 
   return (
-    <div>
+    <div className="page-container">
       <NavBar />
       <Switch>
         <Route exact path="/">
-          <Home />
+          <Home handleAddItem={handleAddItem} />
         </Route>
         <Route path="/coffee">
           <DataCards />
         </Route>
         <Route path="/interact">
-          <Interact handleAddItem={handleAddItem} />
+          <Interact />
         </Route>
-        
       </Switch>
+      <Footer />
     </div>  
   );
 }
