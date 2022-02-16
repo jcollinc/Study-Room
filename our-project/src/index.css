@@ -26,7 +26,7 @@ nav {
   height: 55px;
   background-color: #1f3933;
   /* position: fixed; */
-  padding: 5px 0px 10px 15px;
+  padding: 5px 0px 10px 0px;
 }
 
 nav a {
@@ -39,7 +39,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #27251F;
+  color: #067655;
   border-bottom: 2px solid #1f3933;
 }
 
@@ -49,8 +49,46 @@ nav a:active {
 
 }
 
-/* COFFEE CARDS */
+.page-container {
+  position: relative;
+  min-height: 100vh;
+}
 
+/* FOOTER */
+
+footer {
+  display: inline-block;
+  width: 100%;
+  height: 55px;
+  background-color: #1f3933;
+  padding: 0px 0px 10px 0px;
+  position: absolute;
+  bottom: 0;
+  
+}
+
+footer a {
+  display: inline-block;
+  margin: 1rem 2rem;
+  text-decoration: none;
+  font-size: 1em;
+  color: white;
+  transition: 0.1s;
+}
+
+footer a:hover {
+  color: #067655;
+  border-bottom: 2px solid #1f3933;
+}
+
+footer a:active {
+  color: #1f3933;
+  border-bottom: 2px solid ;
+
+}
+
+
+/* COFFEE CARDS */
 .cards {
   display: flex;
   overflow-x: auto;
@@ -121,6 +159,11 @@ p.card_text {
   height: 200px;
 }
 
+/* COHORT CARDS */
+.cards {
+  padding-bottom: 60px
+}
+
 /* DROPDOWN */
 
 div.dropdown-div {
@@ -172,6 +215,9 @@ select.dropdown
   border: 2px solid #1f3933 ;
   border-radius: 50%;
 }
+
+
+
 
 
 

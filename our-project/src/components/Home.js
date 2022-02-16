@@ -1,20 +1,61 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-function Home() {
-  return (
-    <div>
-      <a href={"https://learning.flatironschool.com"}>⬅️ Back to SENG-LIVE-011022-P2 Dashboard</a>
+function Home({ handleAddItem }) {
 
-      <h3>Introducing Remote Coffee Breaks Hosted by The Wedge School</h3>
+	const [comment, setComment] = useState('')
+	const [error, setError] = useState('')
 
-      <h4>Available for a limited time only, to celebrate Project Week we have partnered with Seattle's finest coffee purveyor to host caffeine-fueled stand-ups/stand-downs to our remote cohorts spread out across America!</h4>
+    function handleSubmit(e) {
+      e.preventDefault();
+  
+      //TODO: additional inputs: Extra shots, etc.
+      const formData = { comment }
+      
+      {/* Controlled form input validation! */}
+      if (comment.length > 0) {
+        setError([])
+  
+        fetch("http://localhost:3000/suggestions", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+        })
+        .then(res => res.json())
+        .then(newItem => {
+          handleAddItem(newItem)
+        })
+      } else {
+        setError(["Add a suggestion!"])
+      }
+    }
 
-      <img src="https://m.psecn.photoshelter.com/img-get/I0000EQLxdBqaqh8/s/1000?1644911951"/>
-
-
-
-    </div>
-  )
+	return (
+		<div>
+		<form onSubmit={handleSubmit}>
+			<label htmlFor=''>Add a suggestion:</label>
+			<input
+			type='text'
+			id='fName'
+			value={comment}
+			onChange={e => setComment(e.target.value)}
+			/>		
+			<button type="submit">Submit</button>
+			
+			{/* And the error state */}
+			{
+			error.length > 0
+				? error.map((error, index) => (
+				<p key={index} style={{ color: "red" }}>
+					{error}
+				</p>
+				))
+				: null
+			}
+			</form> 
+		</div>
+	)
 }
 
 export default Home 
