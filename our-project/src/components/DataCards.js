@@ -7,6 +7,7 @@ function DataCards() {
 	const [coffees, setCoffees] = useState([])
 	const [id, setId] = useState(null)
 	const [coffeeOrder, setCoffeeOrder] = useState([])
+	const [name, setName] = useState(null)
 
 	let newOrder;
 
@@ -35,11 +36,9 @@ function DataCards() {
 
 	function handleDropdownChange (e) {
 		e.target.value.length > 0 ? setId(e.target.value) : setId(null)
+		setName(e.target.options[e.target.selectedIndex].text)
 		setCoffeeOrder([])
 		newOrder = {}
-		console.log(coffeeOrder)
-		console.log(e.target)
-		
 	}
 
 	function handleClaim (e) {
@@ -79,21 +78,23 @@ function DataCards() {
   return (
     <div>
       <div className="dropdown-div">
-		<p>{id ? `Hello name, what would you like to order?` : "Welcome to the study room!"}</p>
+		<p className={name ? "hello" : "welcome"}>
+			{id ? `Hello ${name}, what would you like to order?` : "Welcome to the study room!"}
+		</p>
 	  	<select onChange={handleDropdownChange} className="dropdown">
-			<option value="">Please select name:</option>
-			<option value="1">Tyler</option>
-			<option value="2">Aaron</option>
-			<option value="3">Chun</option>
-			<option value="4">Daniel</option>
-			<option value="5">Ethan</option>
-			<option value="6">Felipa</option>
-			<option value="7">Hamzah</option>
-			<option value="8">Jon</option>
-			<option value="9">Matt</option>
-			<option value="10">Mohammed</option>
-			<option value="11">Vanessa</option>
-			<option value="12">Yeohoon</option>
+			<option name="Jon" value="">Please select name:</option>
+			<option name="Jon" value="1">Tyler</option>
+			<option name="Jon" value="2">Aaron</option>
+			<option name="Jon" value="3">Chun</option>
+			<option name="Jon" value="4">Daniel</option>
+			<option name="Jon" value="5">Ethan</option>
+			<option name="Jon" value="6">Felipa</option>
+			<option name="Jon" value="7">Hamzah</option>
+			<option name="Jon" value="8">Jon</option>
+			<option name="Jon" value="9">Matt</option>
+			<option name="Jon" value="10">Mohammed</option>
+			<option name="Jon" value="11">Vanessa</option>
+			<option name="Jon" value="12">Yeohoon</option>
 		</select>
       </div>
       <div className="cards">

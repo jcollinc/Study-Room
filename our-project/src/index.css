@@ -121,22 +121,37 @@ p.card_text {
   height: 200px;
 }
 
-/* FORM */
+/* DROPDOWN */
 
 div.dropdown-div {
   width: 100%;
   display: block;
   text-align: center;
-  padding-top: 15px;
+  padding-bottom: 30px;
 }
 
 select.dropdown
 {
-  width: 160px;
+  width: 180px;
   display: inline-block;
   margin-left: auto;
   margin-right: auto;
   text-align: left;
+  padding: 5px;
+}
+
+.welcome {
+  font-size: 300%;
+  padding: 0;
+  margin-block-start: 40px;
+  margin-block-end: 40px;
+}
+
+.hello {
+  font-size: 300%;
+  padding: 0;
+  margin-block-start: 40px;
+  margin-block-end: 40px;
 }
 
 /* SUBMIT */
@@ -146,9 +161,8 @@ select.dropdown
   padding-top: 50px;
 }
 
-
-
 /* INTERACT */
+
 .cohort_image {
   height: 125px;
   position: relative;
