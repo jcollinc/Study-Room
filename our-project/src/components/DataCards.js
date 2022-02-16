@@ -5,7 +5,7 @@ import Card from './Card'
 function DataCards() {
 
 	const [coffees, setCoffees] = useState([])
-	const [name, setName] = useState(null)
+	const [id, setId] = useState(null)
 	const [coffeeOrder, setCoffeeOrder] = useState([])
 
 	let newOrder;
@@ -25,7 +25,7 @@ function DataCards() {
 					coffee={coffee} 
 					key={coffee.id} 
 					coffeeOrder={coffeeOrder}
-					name={name} 
+					id={id} 
 					handleClaim={handleClaim}
 				/>
 			)		
@@ -34,8 +34,7 @@ function DataCards() {
 
 
 	function handleDropdownChange (e) {
-		// TODO setName indicates id number NOT name!
-		e.target.value.length > 0 ? setName(e.target.value) : setName(null)
+		e.target.value.length > 0 ? setId(e.target.value) : setId(null)
 		setCoffeeOrder([])
 		newOrder = {}
 		console.log(coffeeOrder)
@@ -65,7 +64,7 @@ function DataCards() {
 	function handleSubmit () {
 		newOrder = {order : coffeeOrder}
 		console.log(newOrder)
-		fetch (`http://localhost:3000/cohorts/${name}`, {
+		fetch (`http://localhost:3000/cohorts/${id}`, {
 			method: "PATCH",
 			headers: {
 				"Content-Type": "application/json", 
@@ -80,21 +79,21 @@ function DataCards() {
   return (
     <div>
       <div className="dropdown-div">
-		<p>{name ? `Hello name, what would you like to order?` : "Welcome to the study room!"}</p>
+		<p>{id ? `Hello name, what would you like to order?` : "Welcome to the study room!"}</p>
 	  	<select onChange={handleDropdownChange} className="dropdown">
-			<option id="0" value="">Please select name:</option>
-			<option id="1" value="1">Tyler</option>
-			<option id="2" value="2">Aaron</option>
-			<option id="3" value="3">Chun</option>
-			<option id="4" value="4">Daniel</option>
-			<option id="5" value="5">Ethan</option>
-			<option id="6" value="6">Felipa</option>
-			<option id="7" value="7">Hamzah</option>
-			<option id="8" value="8">Jon</option>
-			<option id="9" value="9">Matt</option>
-			<option id="10" value="10">Mohammed</option>
-			<option id="11" value="11">Vanessa</option>
-			<option id="12" value="12">Yeohoon</option>
+			<option value="">Please select name:</option>
+			<option value="1">Tyler</option>
+			<option value="2">Aaron</option>
+			<option value="3">Chun</option>
+			<option value="4">Daniel</option>
+			<option value="5">Ethan</option>
+			<option value="6">Felipa</option>
+			<option value="7">Hamzah</option>
+			<option value="8">Jon</option>
+			<option value="9">Matt</option>
+			<option value="10">Mohammed</option>
+			<option value="11">Vanessa</option>
+			<option value="12">Yeohoon</option>
 		</select>
       </div>
       <div className="cards">
