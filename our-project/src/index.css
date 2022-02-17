@@ -254,18 +254,49 @@ select.dropdown
 
 /* DISCUSSIONS */
 
-input {
-  width: 500px;
-  height: 200px;
+
+/* inputs */
+.name {
+  width: 200px;
+  height: 50px;
+}
+
+.comments {
+  width: 200px;
+  height: 150px;
 }
 
 .form-container {
   padding-top: 50px;
-  padding-left: 100px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #1f3933;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
 }
 
 .form-container label {
-  padding-right: 30px;
+  padding-bottom: 10px;
+}
+
+/* comments section */
+h3 {
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  /* border-bottom: solid 0.5px #1f3933; */
+}
+
+p {
+  padding-left: 100px;
+  border-bottom: dashed 1px #1f3933;
 }
 
 
