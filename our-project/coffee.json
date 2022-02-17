@@ -74,12 +74,7 @@
       "fName": "Tyler",
       "title": "Instructor",
       "image": "https://m.psecn.photoshelter.com/img-get/I0000fjnZLkaEh.E/s/1000?1644967937",
-      "id": 1,
-      "order": [
-        "Iced Espresso",
-        "Iced Coffee",
-        "Nitro"
-      ]
+      "id": 1
     },
     {
       "fName": "Aaron",
@@ -149,25 +144,5 @@
     }
   ],
   "suggestions": [
-    {
-      "name": "Tyler",
-      "comment": "Was here.",
-      "id": 1
-    },
-    {
-      "name": "Jon",
-      "comment": "wants your coffee",
-      "id": 2
-    },
-    {
-      "name": "Poncho",
-      "comment": "Eats.",
-      "id": 3
-    },
-    {
-      "name": "Jon ",
-      "comment": "Is Great!",
-      "id": 4
-    }
   ]
 }
