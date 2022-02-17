@@ -8,6 +8,7 @@ function DataCards() {
 	const [id, setId] = useState(null)
 	const [coffeeOrder, setCoffeeOrder] = useState([])
 	const [name, setName] = useState(null)
+	const [modal, setModal] = useState(false)
 
 	let newOrder;
 
@@ -71,7 +72,10 @@ function DataCards() {
 			body: JSON.stringify(newOrder)
       })
 				.then(r => r.json())
-				.then(() => {setCoffeeOrder([])})
+				.then(() => {
+					setCoffeeOrder([]);
+					setModal(true)
+				})
   	}
 	
 
@@ -82,19 +86,19 @@ function DataCards() {
 			{id ? `Hello ${name}, what would you like to order?` : "Welcome to the study room!"}
 		</p>
 	  	<select onChange={handleDropdownChange} className="dropdown">
-			<option name="Jon" value="">Please select name:</option>
-			<option name="Jon" value="1">Tyler</option>
-			<option name="Jon" value="2">Aaron</option>
-			<option name="Jon" value="3">Chun</option>
-			<option name="Jon" value="4">Daniel</option>
-			<option name="Jon" value="5">Ethan</option>
-			<option name="Jon" value="6">Felipa</option>
-			<option name="Jon" value="7">Hamzah</option>
-			<option name="Jon" value="8">Jon</option>
-			<option name="Jon" value="9">Matt</option>
-			<option name="Jon" value="10">Mohammed</option>
-			<option name="Jon" value="11">Vanessa</option>
-			<option name="Jon" value="12">Yeohoon</option>
+			<option value="">Please select name:</option>
+			<option value="1">Tyler</option>
+			<option value="2">Aaron</option>
+			<option value="3">Chun</option>
+			<option value="4">Daniel</option>
+			<option value="5">Ethan</option>
+			<option value="6">Felipa</option>
+			<option value="7">Hamzah</option>
+			<option value="8">Jon</option>
+			<option value="9">Matt</option>
+			<option value="10">Mohammed</option>
+			<option value="11">Vanessa</option>
+			<option value="12">Yeohoon</option>
 		</select>
       </div>
       <div className="cards">
@@ -102,6 +106,16 @@ function DataCards() {
       </div>
 	  <div className="submit-div">
 	  	{coffeeOrder.length === 0 ? null : <button onClick={handleSubmit} className="card_button">Submit Order</button>}
+		<div className={modal ? 'modal-active' : 'modal'} id='modal'>
+			<div className='modal-header'>
+				<div className='title'>Submitted!</div>
+				<button onClick={() => setModal(false)}className='close-button'>x</button>
+			</div>
+			<div className='modal-body'>
+				~Coming right up~ 
+			</div>
+		</div>
+		<div id={modal ? 'overlay-active' : 'overlay'}> </div>
 	  </div>
     </div>
   )

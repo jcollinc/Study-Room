@@ -18,7 +18,7 @@ function Interact() {
 			let noOrderMessage
 			
 			if (cohort.order) {orderMessage = cohort.fName + " ordered: " + cohort.order.join(', ') + " ᕙ(o‸o)ᕗ"; noOrderMessage = null}
-			else {orderMessage = null; noOrderMessage = cohort.fName + " hasn't ordered yet (ￗ﹏ￗ ) "}
+			else {orderMessage = null; noOrderMessage = cohort.fName + " hasn't ordered yet (ￗ﹏ￗ )"}
 
 			return (
 				<li key={cohort.fName} className="cards">

@@ -25,16 +25,6 @@
       "id": 2
     },
     {
-      "title": "Cold Brew",
-      "description": "The trendiest of the iced coffee bunch, cold brew coffees are made by steeping coffee beans from anywhere between 6-36 hours, depending on how strong you would like your cold brew. Once the beans are done steeping, add cold milk or cream.",
-      "ingredients": [
-        "Long steeped coffee",
-        "Ice"
-      ],
-      "image": "https://m.psecn.photoshelter.com/img-get/I0000amogsm1oCF0/s/1000?1644909154",
-      "id": 3
-    },
-    {
       "title": "Flattuccino",
       "description": "Made famous by Flatbucks, the Flattuccino is a blended iced coffee drink that’s topped with whipped cream and syrup. ",
       "ingredients": [
@@ -43,7 +33,7 @@
         "Whip*"
       ],
       "image": "https://m.psecn.photoshelter.com/img-get/I0000wV3RRvRZ_gs/s/1000?1644909154",
-      "id": 4
+      "id": 3
     },
     {
       "title": "Nitro",
@@ -55,6 +45,16 @@
         "Cream*"
       ],
       "image": "https://m.psecn.photoshelter.com/img-get/I0000ZeFNWdeIMxY/s/1000?1644909155",
+      "id": 4
+    },
+    {
+      "title": "Cold Brew",
+      "description": "The trendiest of the iced coffee bunch, cold brew coffees are made by steeping coffee beans from anywhere between 6-36 hours, depending on how strong you would like your cold brew. Once the beans are done steeping, add cold milk or cream.",
+      "ingredients": [
+        "Long steeped coffee",
+        "Ice"
+      ],
+      "image": "https://m.psecn.photoshelter.com/img-get/I0000amogsm1oCF0/s/1000?1644909154",
       "id": 5
     },
     {
@@ -74,13 +74,20 @@
       "fName": "Tyler",
       "title": "Instructor",
       "image": "https://m.psecn.photoshelter.com/img-get/I0000fjnZLkaEh.E/s/1000?1644967937",
-      "id": 1
+      "id": 1,
+      "order": [
+        "Flattuccino",
+        "Nitro"
+      ]
     },
     {
       "fName": "Aaron",
       "title": "Student",
       "image": "https://m.psecn.photoshelter.com/img-get/I0000fjnZLkaEh.E/s/1000?1644967937",
-      "id": 2
+      "id": 2,
+      "order": [
+        "Nitro"
+      ]
     },
     {
       "fName": "Chun",
