@@ -19,6 +19,7 @@ code {
 .logo {
   font-size: 30px;
   color: white;
+  padding-left: 15px;
 }
 
 nav {
@@ -87,8 +88,8 @@ footer a:active {
 
 }
 
-
 /* COFFEE CARDS */
+
 .cards {
   display: flex;
   overflow-x: auto;
@@ -107,6 +108,7 @@ footer a:active {
   background-color:#1f3933;
   text-align:center;
   transition: all 0.2s;
+  cursor: pointer;
 }
 
 .button-claimed {
@@ -120,6 +122,7 @@ footer a:active {
   background-color:#39796a;
   text-align:center;
   transition: all 0.2s;
+  cursor: pointer;
 }
 
 .card {
@@ -159,9 +162,14 @@ p.card_text {
   height: 200px;
 }
 
+.card_title {
+  font-weight: bold;
+}
+
 /* COHORT CARDS */
+
 .cards {
-  padding-bottom: 60px
+  padding-bottom: 30px
 }
 
 /* DROPDOWN */
@@ -188,6 +196,7 @@ select.dropdown
   padding: 0;
   margin-block-start: 40px;
   margin-block-end: 40px;
+  color: #1f3933;
 }
 
 .hello {
@@ -195,13 +204,13 @@ select.dropdown
   padding: 0;
   margin-block-start: 40px;
   margin-block-end: 40px;
+  color: #1f3933;
 }
 
 /* SUBMIT */
 
 .submit-div {
   text-align: center;
-  padding-top: 50px;
 }
 
 /* INTERACT */
@@ -216,7 +225,88 @@ select.dropdown
   border-radius: 50%;
 }
 
+/* MODAL */
 
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 30px;
+  z-index: 10;
+  background-color: white;
+  width: 200px;
+  max-width: 70%;
+}
+
+.modal-active {
+  transform: translate(-50%, -50%) scale(1);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transition: 200ms ease-in-out;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 30px;
+  z-index: 10;
+  background-color: #1f3933;
+  color: white;
+  width: 200px;
+  max-width: 70%;
+}
+
+.modal-header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.modal-header .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+}
+
+.modal-body {
+  padding: 10px 15px;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom:0;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+
+}
+
+#overlay-active {
+  opacity: 1;
+  pointer-events: all;
+  position: fixed;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom:0;
+  background-color: rgba(0, 0, 0, .5);
+}
 
 
 
