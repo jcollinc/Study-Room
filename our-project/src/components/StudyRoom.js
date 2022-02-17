@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Card from './Card'
 
-
-function DataCards() {
+function StudyRoom() {
 
 	const [coffees, setCoffees] = useState([])
 	const [id, setId] = useState(null)
@@ -33,7 +32,6 @@ function DataCards() {
 			)		
 		}
 	)
-
 
 	function handleDropdownChange (e) {
 		e.target.value.length > 0 ? setId(e.target.value) : setId(null)
@@ -78,7 +76,6 @@ function DataCards() {
 				})
   	}
 	
-
   return (
     <div>
       <div className="dropdown-div">
@@ -121,4 +118,4 @@ function DataCards() {
   )
 }
 
-export default DataCards
+export default StudyRoom

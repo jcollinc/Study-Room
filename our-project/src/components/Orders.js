@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-function Interact() {
+function Orders() {
 
 	const [cohorts, setCohorts] = useState([])
 
@@ -21,8 +21,8 @@ function Interact() {
 			else {orderMessage = null; noOrderMessage = cohort.fName + " hasn't ordered yet (ￗ﹏ￗ )"}
 
 			return (
-				<div className="cohort-card">
-					<li key={cohort.fName} className="cards">
+				<div key={cohort.fName} className="cohort-card">
+					<li className="cards">
 						<div className="cards_item">
 							<div className="image-div">
 								<img 
@@ -43,4 +43,4 @@ function Interact() {
 	)
 }
 
-export default Interact
+export default Orders
