@@ -2,18 +2,21 @@ import React, { useState, useEffect } from 'react'
 
 function Discussions({ handleAddItem }) {
 
+	const [suggestions, setSuggestions] = useState([])
 	const [comment, setComment] = useState('')
 	const [name, setName] = useState('')
 	const [error, setError] = useState('')
-	const [suggestions, setSuggestions] = useState([])
+	
 
     function handleSubmit(e) {
       e.preventDefault();
+	  console.log(name, "this is name")
+	  console.log(comment, "this is comment")
   
-      const formData = { comment }
+      const formData = { name, comment }
       
       {/* Controlled form input validation! */}
-      if (comment.length > 0) {
+      if (name.length > 0 && comment.length > 0) {
         setError([])
   
         fetch("http://localhost:3000/suggestions", {
@@ -26,9 +29,10 @@ function Discussions({ handleAddItem }) {
         .then(res => res.json())
         .then(newItem => {
           handleAddItem(newItem)
+		  setSuggestions(suggestions => [newItem, ...suggestions])
         })
       } else {
-        setError(["Add a suggestion!"])
+        setError(["Add your name and suggestion!"])
       }
     }
 

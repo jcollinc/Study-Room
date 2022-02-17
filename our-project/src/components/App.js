@@ -17,6 +17,12 @@ function App() {
     setCoffees(updatedCards)
   }
 
+  
+
+  
+
+
+
   return (
     <div className="page-container">
       <NavBar />

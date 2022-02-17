@@ -65,7 +65,6 @@ footer {
   padding: 0px 0px 10px 0px;
   position: absolute;
   bottom: 0;
-  
 }
 
 footer a {
@@ -85,7 +84,22 @@ footer a:hover {
 footer a:active {
   color: #1f3933;
   border-bottom: 2px solid ;
+}
 
+#contact {
+  cursor: pointer;
+  background: none;
+	color: white;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+  padding-top: 20px;
+  padding-left: 40px;
+}
+
+#contact a:hover {
+  border-bottom: 2px solid white;
 }
 
 /* STUDY ROOM */
@@ -294,7 +308,7 @@ h3 {
   /* border-bottom: solid 0.5px #1f3933; */
 }
 
-p {
+.comments-container p {
   padding-left: 100px;
   border-bottom: dashed 1px #1f3933;
 }
