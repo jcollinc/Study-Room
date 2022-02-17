@@ -74,20 +74,13 @@
       "fName": "Tyler",
       "title": "Instructor",
       "image": "https://m.psecn.photoshelter.com/img-get/I0000fjnZLkaEh.E/s/1000?1644967937",
-      "id": 1,
-      "order": [
-        "Flattuccino",
-        "Nitro"
-      ]
+      "id": 1
     },
     {
       "fName": "Aaron",
       "title": "Student",
       "image": "https://m.psecn.photoshelter.com/img-get/I0000fjnZLkaEh.E/s/1000?1644967937",
-      "id": 2,
-      "order": [
-        "Nitro"
-      ]
+      "id": 2
     },
     {
       "fName": "Chun",
