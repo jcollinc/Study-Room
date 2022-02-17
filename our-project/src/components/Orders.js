@@ -12,12 +12,19 @@ function Orders() {
 		})
 	}, [])
 
+	function handleImgClick (e) {
+		let randomNum = Math.floor(Math.random() * 1084);
+		let newSrc=`https://picsum.photos/id/${randomNum}/200/300`
+		e.target.src=newSrc
+		
+	}
+
 	let itemsToDisplay = cohorts
 		.map(cohort => {
 			let orderMessage
 			let noOrderMessage
 			
-			if (cohort.order) {orderMessage = cohort.fName + " ordered: " + cohort.order.join(', ') + [cohort.order.length > 3 ? " ᕙ(⊙‸⊙)ᕗ" : " ᕙ(o‸o)ᕗ"]; noOrderMessage = null}
+			if (cohort.order) {orderMessage = cohort.fName + "'s order: " + cohort.order.join(', ') + [cohort.order.length > 3 ? " ᕙ(⊙‸⊙)ᕗ" : " ᕙ(o‸o)ᕗ"]; noOrderMessage = null}
 			else {orderMessage = null; noOrderMessage = cohort.fName + " hasn't ordered yet (ￗ﹏ￗ )"}
 
 			return (
@@ -26,10 +33,12 @@ function Orders() {
 						<div className="cards_item">
 							<div className="image-div">
 								<img 
-									className="cohort_image" src={cohort.image} 
+									onClick={handleImgClick}
+									className="cohort_image" 
+									src={cohort.image} 
 								/>
+								<p>{cohort.order ? orderMessage : noOrderMessage}</p>
 							</div>
-							<p>{cohort.order ? orderMessage : noOrderMessage}</p>
 						</div>
 					</li>	
 				</div>

@@ -44,7 +44,7 @@ function Discussions({ handleAddItem }) {
 		})
 	}, [])
 
-	let itemsToDisplay = suggestions.map(suggestion => <p key={suggestion.id}>{suggestion.name} {suggestion.comment} </p>)
+	let itemsToDisplay = suggestions.map(suggestion => <p key={suggestion.id}>{suggestion.name}: {suggestion.comment} </p>)
 
 	let form = (
 		<div className="form-container">

@@ -76,7 +76,7 @@ footer a {
   transition: 0.1s;
 }
 
-footer a:hover {
+#contact:hover {
   color: #067655;
   border-bottom: 2px solid #1f3933;
 }
@@ -160,7 +160,9 @@ footer a:active {
 
 .card .image img {
   border-radius: 10px;
+  cursor: pointer;
 }
+
 
 div.description {
   height: 300px;
@@ -253,6 +255,17 @@ select.dropdown
   margin-left: auto;
 }
 
+.cohort_image_hover {
+  height: 170px;
+  width: 170px;
+  display: flex;
+  justify-content: center;
+  border: 2px solid #1f3933 ;
+  border-radius: 50%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .image-ul {
   justify-content: center;
   margin-left: auto;
@@ -273,16 +286,19 @@ select.dropdown
 .name {
   width: 200px;
   height: 50px;
+  margin-bottom: 20px;
+  outline-color: #1f3933;
 }
 
 .comments {
   width: 200px;
-  height: 150px;
+  height: 100px;
+  margin-bottom: 20px;
 }
 
 .form-container {
   padding-top: 50px;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
   border-bottom: 1px solid #1f3933;
   margin-left: auto;
   margin-right: auto;
@@ -311,6 +327,7 @@ h3 {
 .comments-container p {
   padding-left: 100px;
   border-bottom: dashed 1px #1f3933;
+  padding-bottom: 5px;
 }
 
 
