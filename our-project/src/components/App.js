@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Switch, Route } from 'react-router-dom'
-import Home from "./Home"
+import Discussions from "./Discussions"
 import NavBar from "./NavBar"
 import Card from './Card'
-import DataCards from "./DataCards"
-import Interact from "./Interact"
+import StudyRoom from "./StudyRoom"
+import Orders from "./Orders"
 import Footer from "./Footer"
 
 function App() {
@@ -22,13 +22,16 @@ function App() {
       <NavBar />
       <Switch>
         <Route exact path="/">
-          <Home handleAddItem={handleAddItem} />
+          <StudyRoom />
         </Route>
-        <Route path="/coffee">
-          <DataCards />
+        <Route exact path="/study-room">
+          <StudyRoom />
         </Route>
-        <Route path="/interact">
-          <Interact />
+        <Route path="/orders">
+          <Orders />
+        </Route>
+        <Route path="/discussions">
+          <Discussions handleAddItem={handleAddItem} />
         </Route>
       </Switch>
       <Footer />

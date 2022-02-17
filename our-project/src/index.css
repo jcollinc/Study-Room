@@ -88,7 +88,7 @@ footer a:active {
 
 }
 
-/* COFFEE CARDS */
+/* STUDY ROOM */
 
 .cards {
   display: flex;
@@ -213,20 +213,22 @@ select.dropdown
   text-align: center;
 }
 
-/* INTERACT */
+/* ORDERS */
 
 .cohort-container {
   display: grid;
   width: 100%;
-  height: 50%;
-  grid-template-rows: 270px 270px 270px; 
+  height: 100%;
+  grid-template-rows: 33% 33% 33%; 
   grid-template-columns: 25% 25% 25% 25%;
-  padding-top: 28px;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-top: 50px;
 }
 
 .cohort-card {
   flex: 0 1 auto;
-  height: 300px;
+  height: 100%;
   text-align: center;
 }
 
@@ -253,6 +255,26 @@ select.dropdown
   margin-right: auto;
   align-items: center;
 }
+
+/* DISCUSSIONS */
+
+input {
+  width: 500px;
+  height: 200px;
+}
+
+.form-container {
+  padding-top: 50px;
+  padding-left: 100px;
+}
+
+.form-container label {
+  padding-right: 30px;
+}
+
+
+
+
 
 /* MODAL */
 
