@@ -21,21 +21,23 @@ function Interact() {
 			else {orderMessage = null; noOrderMessage = cohort.fName + " hasn't ordered yet (ￗ﹏ￗ )"}
 
 			return (
-				<li key={cohort.fName} className="cards">
-					<div className="cards_item">
-						<ul>
-							<img 
-								className="cohort_image" src={cohort.image} 
-							/>
-							{cohort.order ? orderMessage : noOrderMessage}
-						</ul>
-					</div>
-				</li>	
+				<div className="cohort-card">
+					<li key={cohort.fName} className="cards">
+						<div className="cards_item">
+							<div className="image-div">
+								<img 
+									className="cohort_image" src={cohort.image} 
+								/>
+							</div>
+							<p>{cohort.order ? orderMessage : noOrderMessage}</p>
+						</div>
+					</li>	
+				</div>
 			)
 		})
 
 	return (
-		<div>
+		<div className="cohort-container">
 			{itemsToDisplay}
 		</div>
 	)
