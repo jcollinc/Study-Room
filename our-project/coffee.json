@@ -144,34 +144,5 @@
     }
   ],
   "suggestions": [
-    {
-      "name": "Jon",
-      "comment": "Hello, World!",
-      "id": 1
-    },
-    {
-      "comment": "ad",
-      "id": 2
-    },
-    {
-      "comment": "ad",
-      "id": 3
-    },
-    {
-      "comment": "ad",
-      "id": 4
-    },
-    {
-      "comment": "ad",
-      "id": 5
-    },
-    {
-      "comment": "ad",
-      "id": 6
-    },
-    {
-      "comment": "ad",
-      "id": 7
-    }
   ]
 }
