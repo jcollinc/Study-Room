@@ -145,9 +145,34 @@
   ],
   "suggestions": [
     {
-      "name": "Jon",
-      "comment": "The coffee is a lie",
+      "postTime": "7:15:19 PM",
+      "name": "GLaDOS",
+      "comment": "The coffee is a lie.",
       "id": 1
+    },
+    {
+      "postTime": "8:52:06 PM",
+      "name": "Paul",
+      "comment": "The commonwealth! ",
+      "id": 2
+    },
+    {
+      "postTime": "8:52:06 PM",
+      "name": "John",
+      "comment": "Yes?!",
+      "id": 3
+    },
+    {
+      "postTime": "9:27:28 PM",
+      "name": "Patrick",
+      "comment": "The inner machinations of my mind... are an enigma.",
+      "id": 4
+    },
+    {
+      "postTime": "8:24:10 PM",
+      "name": "Marcel",
+      "comment": "   ",
+      "id": 5
     }
   ]
 }

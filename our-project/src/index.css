@@ -324,8 +324,27 @@ h3 {
   /* border-bottom: solid 0.5px #1f3933; */
 }
 
-.comments-container p {
-  padding-left: 100px;
+.comments-container {
+  max-width: 100%;
+ 
+}
+
+#comment {
+  width: 90%;
+  padding-left: 50px;
+  overflow-wrap: break-word;
+}
+
+#time {
+  width: 150px;
+  text-align: right;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#time-comment {
+  position: relative;
+  display: flex;
   border-bottom: dashed 1px #1f3933;
   padding-bottom: 5px;
 }

@@ -6,14 +6,14 @@ function Discussions({ handleAddItem }) {
 	const [comment, setComment] = useState('')
 	const [name, setName] = useState('')
 	const [error, setError] = useState('')
-	
 
     function handleSubmit(e) {
       e.preventDefault();
 	  console.log(name, "this is name")
 	  console.log(comment, "this is comment")
   
-      const formData = { name, comment }
+	  let postTime = new Date().toLocaleTimeString()
+      const formData = { postTime, name, comment }
       
       {/* Controlled form input validation! */}
       if (name.length > 0 && comment.length > 0) {
@@ -40,11 +40,16 @@ function Discussions({ handleAddItem }) {
 		fetch('http://localhost:3000/suggestions')
 		.then(res => res.json())
 		.then(suggestions => {
-			setSuggestions(suggestions)
+			setSuggestions(suggestions.reverse())
 		})
 	}, [])
 
-	let itemsToDisplay = suggestions.map(suggestion => <p key={suggestion.id}>{suggestion.name}: {suggestion.comment} </p>)
+	let itemsToDisplay = suggestions.map(suggestion => 
+		<div id="time-comment" key={suggestion.id}>
+			<p id="time" >{suggestion.postTime} </p>
+			<p id="comment">{suggestion.name}: {suggestion.comment} </p>
+		</div>
+	)
 
 	let form = (
 		<div className="form-container">
