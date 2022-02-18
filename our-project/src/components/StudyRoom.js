@@ -76,12 +76,6 @@ function StudyRoom() {
 				})
   	}
 	
-	let val = 1;
-	let cohort = 
-	["Tyler", "Aaron", "Chun", "Daniel", "Ethan", "Felipa", 
-	"Hamzah", "Jon", "Matt", "Mohammed", "Vanessa", "Yeohoon"]
-	let selector = cohort.map(member => {return (<option key={val++} value={val++}>{member}</option>)})
-	
   return (
     <div>
       <div className="dropdown-div">
@@ -90,7 +84,18 @@ function StudyRoom() {
 		</p>
 	  	<select onChange={handleDropdownChange} className="dropdown">
 			<option value="">Please select name:</option>
-			{selector}
+			<option value="1">Tyler</option>
+			<option value="2">Aaron</option>
+			<option value="3">Chun</option>
+			<option value="4">Daniel</option>
+			<option value="5">Ethan</option>
+			<option value="6">Felipa</option>
+			<option value="7">Hamzah</option>
+			<option value="8">Jon</option>
+			<option value="9">Matt</option>
+			<option value="10">Mohammed</option>
+			<option value="11">Vanessa</option>
+			<option value="12">Yeohoon</option>
 		</select>
       </div>
       <div className="cards">
